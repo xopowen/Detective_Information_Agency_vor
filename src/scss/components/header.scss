@@ -1,0 +1,34 @@
+@import "addidions/screen-mixins";
+.header {
+  display: flex;
+  justify-content: space-between;
+  align-content: center;
+  height: clamp(57px,14vw,108px);
+
+  gap: 20px;
+  &__left {
+    width: clamp(132px,14vw,243px) ;
+    flex-shrink: 1;
+    margin: auto 0;
+  }
+  &__image {
+    @include media-phones375max{
+      max-width: 132px;
+    }
+  }
+  &__center {
+    white-space: nowrap;
+    align-self: center;
+    margin-left: -2%;
+  }
+  &__right {
+    flex-shrink: 1;
+    white-space: nowrap;
+    font-size: 20px;
+    align-self: center;
+    @include media-portrait767max {
+      &{display: none;}
+    }
+  }
+}
+

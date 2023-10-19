@@ -1,0 +1,10 @@
+@import "circle";
+@import "mobile";
+@import "circle";
+@import "desktop";
+@import "strip";
+@import "folder";
+#main-svg #circle-icons > g{
+  transform-origin:center center ;
+}
+

@@ -1,0 +1,104 @@
+@import "addidions/color-var";
+button{
+  position: relative;
+  transition: 0.3s;
+  &:focus{
+    outline: 1px solid var(--outline-color,red);
+  }
+  &:hover{
+
+  }
+  &:active{
+    transform: scale(1.1);
+  }
+}
+
+.button {
+  display: flex;
+  align-items: center;
+  border-radius: 12px;
+  justify-content: space-around;
+  gap: 12px;
+  &_application {
+    grid-area: button;
+    padding: 24px;
+    background: rgba(33, 56, 135, 0.06);
+    max-width: 361px;
+    max-height: 90px;
+    @include media-phones480max{
+      margin-top: 57px;
+      padding: 24px 18px;
+      max-height: 60px;
+    & .button__text{
+      flex-grow: 1;
+      text-align: start;
+    }
+    }
+  }
+  &_application &__text{
+
+    font-size: clamp(14px,1vw, 24px)   ;
+
+    letter-spacing: -0.72px;
+  }
+
+  &__text {
+    font-weight: 700;
+    line-height: 100%;
+    letter-spacing: -0.03em;
+    color: var(--color-213887);
+  }
+  &__img {
+    width: 34px;
+    height: 34px;
+    &_avg{
+      width: 41px;
+      height: 41px;
+    }
+    @include media-phones480max{
+      width: 21px;
+      height: 21px;
+    }
+  }
+
+  &_chat {
+    align-self: end;
+    display: inline-flex;
+    height: 54px;
+    padding: 16px 24px;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
+    flex-shrink: 0;
+    border-radius: 30px;
+    @media screen and (max-width: 376px)  {
+      &{
+        display: none;
+      }
+    }
+  }
+  &_chat &__text{
+    color: var(--color-142251);
+    font-size: 24px;
+    font-style: normal;
+    font-weight: 600;
+    line-height: 100%;
+    letter-spacing: -0.72px;
+
+    a{
+      color: var(--color-213887);
+      font-size: 20px;
+      font-style: normal;
+      font-weight: 700;
+      line-height: 100%;
+      letter-spacing: -0.6px;
+      text-decoration-line: underline;
+      text-transform: lowercase;
+    }
+  }
+  &__link {
+  }
+}
+.button-not-backrount{
+  background: none;
+}

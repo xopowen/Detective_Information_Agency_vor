@@ -1,0 +1,17 @@
+@import "addidions/screen-mixins";
+//.container {
+//  max-width:1190px;
+//  width:100%;
+//  padding: 0px 15px;
+//  margin:auto;
+//  height: 100%;
+//}
+.container {
+   max-width: 1920px;
+   padding: 50px 38px;
+   margin: auto;
+   @include media-phones375max{
+     padding:20px 19px;
+   }
+
+ }

@@ -1,0 +1,105 @@
+@import "addidions/screen-mixins";
+.card {
+  border-radius: 22px;
+  padding: 20px;
+  display: flex;
+  flex-direction: column;
+
+    @include media-phones375max  {
+    height: 150px !important;
+    width: 335px !important;
+    max-width: 375px !important;
+    transform: rotate(-0deg)!important;
+    background: #F2F3F8;
+    border-radius: 22px;
+    margin: 5px 0;
+    justify-content: center;
+  }
+
+
+  span{
+    color:#989EB1;
+  }
+  &_header {
+    display: flex;
+    justify-content: space-between;
+  }
+  &_left {
+    display: flex;
+    width: 30%;
+    justify-content: space-around;
+    align-items: center;
+  }
+  &_icon {
+    opacity: 0.5;
+  }
+  &_note {
+    font-size: 24px;
+    color: #989EB1;
+  }
+  &_right {
+    display: flex;
+    width: 20%;
+    justify-content: space-between;
+  }
+  &_body {
+
+    flex-grow: 1;
+
+      @include media-phones375max  {
+      flex-grow: 0;
+      display: flex;
+      flex-direction: row  !important;
+      align-items: center;
+      p{
+        position: static !important;
+      }
+    }
+
+  }
+  &_img {
+
+      @include media-phones375max  {
+      img,picture{
+        max-width: 100%;
+      }
+
+    }
+  }
+  &_footer {
+    align-self: end;
+  }
+  &__one {
+    max-width: 454px;
+    height: 293px;
+    transform: rotate(-12deg);
+    background: #F2F3F8;
+  }
+  &__two {
+    height: 380px;
+    p{
+      max-width: 320px;
+      position: relative;
+      top: -90px;
+    }
+
+  }
+  &__three {
+    height: 559px;
+    width: 350px;
+    .card_body {
+      display: flex;
+      flex-direction: column;
+      align-items: flex-end;
+      justify-content: space-between;
+    }
+  }
+  &__four {
+    position: relative;
+    top: 90px;
+    max-width: 270px;
+      @include media-phones375max  {
+      position: static;
+    }
+  }
+}

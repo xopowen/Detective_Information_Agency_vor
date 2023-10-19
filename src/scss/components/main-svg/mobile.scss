@@ -1,0 +1,48 @@
+@import "../addidions/variable";
+@import "../addidions/color-var";
+
+
+
+.mobile {
+  transition: 0.3s;
+  g{
+    pointer-events: all;
+  }
+  // .mobile__receiver
+  &__receiver {
+  }
+  &__line{
+  }
+  // .mobile__body
+  &__body {
+  }
+
+  // .mobile__strip
+  &__strip {
+  }
+
+
+  // .mobile__circle
+  &__circle {
+  }
+
+  // .mobile__touchpad
+  &__touchpad {
+    transition: inherit;
+    &:hover{
+     & .mobile__circle-vector{
+        transition: inherit;
+        @for $m from 1 through 5 {
+          &:nth-child(#{$m}){
+            transform:  scale(1-0.1*$m);
+          }
+        }
+      }
+    }
+  }
+  &__circle-vector{
+    transform-origin:59% 88%;
+    transition: inherit;
+  }
+
+}

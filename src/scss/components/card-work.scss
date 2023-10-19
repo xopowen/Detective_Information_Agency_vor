@@ -1,0 +1,27 @@
+.card-work {
+
+  background: #FFF;
+  border: 1px solid #989EB1;
+  border-radius: 22px;
+  padding: 20px 20px 20px 38px;
+  color: #989EB1;
+  &_header {
+    display: flex;
+    justify-content: space-between;
+  }
+  &_icon {}
+  &_left-text {
+    font-size: 20px;
+    line-height: 100%;
+    text-align: right;
+    letter-spacing: -0.03em;
+  }
+  &_subtext {
+
+  }
+  &_main {
+    font-size: 30px;
+    line-height: 120%;
+    letter-spacing: -0.03em;
+  }
+}

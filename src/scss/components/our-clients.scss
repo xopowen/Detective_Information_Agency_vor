@@ -1,0 +1,57 @@
+.our-clients {
+  background: linear-gradient(0deg, rgba(255, 255, 255, 0.2), rgba(255, 255, 255, 0.2)), #F2F3F8;
+  display: grid;
+  grid-template-columns: 20% 50% 30%;
+  grid-template-areas: "header list subtext" ;
+  background-image: url("../img/cucle.png");
+  gap: 44px;
+  @media screen and (max-width: 376px)  {
+    grid-template-columns: 100%;
+    grid-template-areas: "header " "subtext" "list" ;
+  }
+  &_header {
+    grid-area: header;
+    font-size: 84px;
+    line-height: 90%;
+    letter-spacing: -0.04em;
+    @media screen and (max-width: 376px)  {
+      font-size: 40px;
+      line-height: 85%;
+
+    }
+  }
+  &_list {
+    grid-area: list;
+    display: grid;
+    grid-template-columns: 50% 50%;
+    gap: 32px;
+    justify-content: center;
+
+  }
+  &_item {
+    background: white;
+    border-radius: 44px;
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+    @media screen and (max-width: 376px)  {
+
+    }
+
+  }
+  &_icon {
+    align-self: end;
+  }
+  &_subtext {
+    grid-area: subtext;
+    margin: 20px;
+    font-size: 34px;
+    line-height: 140%;
+    letter-spacing: -0.03em;
+    color: #989EB1;
+    @media screen and (max-width: 376px)  {
+      font-size: 20px;
+      line-height: 140%;
+    }
+  }
+}

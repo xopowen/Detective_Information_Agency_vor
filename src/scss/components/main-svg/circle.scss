@@ -1,0 +1,9 @@
+.circle {
+  background: var(--color-E4E7F1);
+  border: 1px solid var(--color-E4E7F1);
+  border-radius: 100%;
+  // .circle_while
+  &_while {
+    background: #FFFFFF;
+  }
+}

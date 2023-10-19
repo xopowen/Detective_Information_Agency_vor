@@ -1,0 +1,23 @@
+
+//чёрный цвет
+$black_color:black;
+//серый цвет
+$gray_color:#6B6B6C;
+//булый цвет
+$white_color: #728dab;
+
+$color_active_link:blue;
+:root{
+  --background-color-main:white;
+  --font-color-main:black;
+  --color-active_link:blue;
+  --outline-color:#728DABFF;
+  --color-E4E7F1:#E4E7F1;
+  --color-142251:#142251;
+  --color-213887:#213887 ;
+}
+:root[theme='dark'] {
+  --background-color-main:#6B6B6C;
+  --font-color-main:black;
+  --color-active_link: rgba(56, 110, 232, 0.2);
+}
