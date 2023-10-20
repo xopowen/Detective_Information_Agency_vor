@@ -39,6 +39,18 @@
         }
       }
     }
+    @include media-not-hover{
+     &:active{
+       & .mobile__circle-vector{
+         transition: inherit;
+         @for $m from 1 through 5 {
+           &:nth-child(#{$m}){
+             transform:  scale(1-0.1*$m);
+           }
+         }
+       }
+     }
+    }
   }
   &__circle-vector{
     transform-origin:59% 88%;

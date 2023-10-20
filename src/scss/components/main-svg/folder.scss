@@ -43,5 +43,28 @@
       transform:translateY(-40px);
     }
   }
+  @include media-not-hover{
+    &:active{
+      .folder__back {
+        transform:rotate(-3deg) ;
+        transition: inherit;
+      }
 
+      // .folder__page
+      .folder__page {
+        transform:translateY(-20px);
+        transition: inherit;
+
+      }
+
+      // .folder__front
+      .folder__front {
+        transform:rotate(3deg) ;
+        transition: inherit;
+      }
+      .folder__strings{
+        transform:translateY(-40px);
+      }
+    }
+  }
 }

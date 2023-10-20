@@ -32,7 +32,7 @@
 }
 
 @mixin media-not-hover(){
-  @media not (hover: none){
+  @media (hover: none){
     @content
   }
 }

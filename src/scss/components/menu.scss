@@ -39,6 +39,9 @@
     transition: 0.3s;
     translate: 0%;
   }
+
+
+
   &__tachBord{
     path,
     svg,
@@ -47,6 +50,7 @@
     }
     display:none;
     @include media-phones480max{
+
       transition: 0.3s;
       display: flex;
       border-radius: 0;
@@ -72,13 +76,12 @@
 @include media-phones480max{
 
   .menu__list {
-
+    position: fixed;
     font-weight:normal;
 
     width: 100vw;
-    height: 92vh;
-    bottom: 0;
-    position: absolute;
+    height: 100%;
+    top: 50px;
     left: 0;
     z-index: 100;
     background-color: var(--background-color-main);

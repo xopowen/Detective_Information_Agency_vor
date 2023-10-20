@@ -1,7 +1,12 @@
 import anime from 'animejs/lib/anime.es.js';
-import {defaults} from "gulp-fonter/dist/lib/config";
 
-window.addEventListener('load',()=>{
+
+/**
+ * @description set animation in svg with id = #main-svg.
+ * @depended anime.js
+ * @see anime
+ */
+export default function  initMainSvgAnimation(){
 
     /**
      * animation point for svg - main-svg
@@ -47,12 +52,12 @@ window.addEventListener('load',()=>{
                 targets:v,
                 translateX:71,
                 translateY:18,
-                },
+            },
             '2':{
                 targets:v,
                 translateX:16,
                 translateY:65,
-                },
+            },
             '3':{
                 targets:v,
                 translateX: [
@@ -75,7 +80,7 @@ window.addEventListener('load',()=>{
         circleIconsTimeLine.add(anime_blanks[i+''] || {} )
     })
 
-})
+}
 
 
 

@@ -29,7 +29,7 @@ h3,
 h4,
 h5,
 p{
-	font-family: Gilroy, sans-serif;
+	font-family:Gilroy;
 	font-style:normal;
 	font-weight:400
 }
@@ -846,11 +846,11 @@ p{
 		transform:translateY(-3px) rotate(-40deg)
 	}
 	.menu__list{
+		position:fixed;
 		font-weight:400;
 		width:100vw;
-		height:92vh;
-		bottom:0;
-		position:absolute;
+		height:100%;
+		top:50px;
 		left:0;
 		z-index:100;
 		background-color:var(--background-color-main);
@@ -986,5 +986,62 @@ p{
 	}
 	.card__four{
 		position:static
+	}
+}
+@media (hover:none){
+	.mobile__touchpad:active .mobile__circle-vector{
+		-webkit-transition:inherit;
+		transition:inherit
+	}
+	.mobile__touchpad:active .mobile__circle-vector:nth-child(1){
+		-webkit-transform:scale(.9);
+		-ms-transform:scale(.9);
+		transform:scale(.9)
+	}
+	.mobile__touchpad:active .mobile__circle-vector:nth-child(2){
+		-webkit-transform:scale(.8);
+		-ms-transform:scale(.8);
+		transform:scale(.8)
+	}
+	.mobile__touchpad:active .mobile__circle-vector:nth-child(3){
+		-webkit-transform:scale(.7);
+		-ms-transform:scale(.7);
+		transform:scale(.7)
+	}
+	.mobile__touchpad:active .mobile__circle-vector:nth-child(4){
+		-webkit-transform:scale(.6);
+		-ms-transform:scale(.6);
+		transform:scale(.6)
+	}
+	.mobile__touchpad:active .mobile__circle-vector:nth-child(5){
+		-webkit-transform:scale(.5);
+		-ms-transform:scale(.5);
+		transform:scale(.5)
+	}
+	.folder:active .folder__back{
+		-webkit-transform:rotate(-3deg);
+		-ms-transform:rotate(-3deg);
+		transform:rotate(-3deg);
+		-webkit-transition:inherit;
+		transition:inherit
+	}
+	.folder:active .folder__page{
+		-webkit-transform:translateY(-20px);
+		-ms-transform:translateY(-20px);
+		transform:translateY(-20px);
+		-webkit-transition:inherit;
+		transition:inherit
+	}
+	.folder:active .folder__front{
+		-webkit-transform:rotate(3deg);
+		-ms-transform:rotate(3deg);
+		transform:rotate(3deg);
+		-webkit-transition:inherit;
+		transition:inherit
+	}
+	.folder:active .folder__strings{
+		-webkit-transform:translateY(-40px);
+		-ms-transform:translateY(-40px);
+		transform:translateY(-40px)
 	}
 }

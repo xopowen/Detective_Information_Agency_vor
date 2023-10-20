@@ -55,6 +55,8 @@
     "gulp-webp-css": "^1.1.0",
     "gulp-webp-html": "^1.0.2",
     "gulp-webp-html-nosvg": "^1.1.1",
+    "jest": "^29.7.0",
+    "jest-environment-jsdom": "^29.7.0",
     "sass": "^1.64.1",
     "webpack": "^5.88.2",
     "webpack-stream": "^7.0.0"
