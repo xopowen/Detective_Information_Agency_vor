@@ -1,12 +1,9 @@
-@import "components/addidions/fonts";
+@import "fonts.css";
 @import "components/addidions/fout-var";
 @import "components/addidions/color-var";
 
-
 @import "components/addidions/style_zeroing";
-
 @import "components/addidions/variable";
-
 
 @import "components/addidions/mixins";
 @import "components/addidions/screen-mixins";
@@ -23,6 +20,11 @@
 @import "components/card-work";
 @import 'components/start-page';
 @import "components/main-svg/main-svg";
+@import "components/text";
+
+section+section{
+  margin-top: 50px;
+}
 
 
 body{
@@ -39,7 +41,7 @@ main{
 
 
 a,a:visited{
-  color:var(--color-active_link);
+  color:black;
 }
 picture,
   svg,
@@ -57,7 +59,7 @@ h4,
 h5,
 a,
 p{
-  font-family: 'Gilroy';
+  font-family: Gilroy, sans-serif;
   @extend %main_font;
 }
 

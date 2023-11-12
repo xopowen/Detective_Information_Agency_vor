@@ -1,51 +1,63 @@
 @import "addidions/screen-mixins";
 
 .about-us {
-  margin: 150px 0;
-    @include media-phones375max  {
-    margin: 20px 0;
-  }
-  &_header {
+
+  &__header {
     text-align: center;
       @include media-phones375max  {
       text-align: left;
     }
   }
-  &_heat {
-    font-weight: 400;
-    font-size: 94px;
-    letter-spacing: -0.04em;
-    color: #142251;
-      @include media-phones375max  {
-      font-size: 40px;
-    }
+  &__heat {
+
   }
-  &_subtext {
-    font-size: 34px;
+  &__subtext {
+
     line-height: 120%;
     letter-spacing: -0.03em;
-    color: #989EB1;
+    color: var(--color-989EB1,#989EB1);
     max-width: 500px;
     margin: auto;
-      @include media-phones375max  {
-      font-size: 14px;
+      @include media-phones480max  {
       margin: 20px 0;
     }
   }
-  &_list-card {
+  &__list-card {
+    position: relative;
     display: flex;
-    font-size: 34px;
-    line-height: 100%;
-    letter-spacing: -0.04em;
     justify-content: space-between;
     margin-top: 100px;
-
-      @include media-phones375max  {
-      font-size: 17px;
-      line-height: 120%;
-      letter-spacing: -0.02em;
+    align-content:start;
+    row-gap: 11px;
+    @include media-phones480max  {
+      justify-content: center;
+      align-items: center;
       margin-top: 20px;
       flex-wrap: wrap;
+    }
+    &:before{
+      content: '';
+      position: absolute;
+      width: 77%;
+      left: 10%;
+      height: 100%;
+      background-image:url("../img/icons/pins.svg") ;
+      background-repeat: no-repeat;
+      background-size: contain;
+      background-position: top;
+      z-index: 10;
+      pointer-events: none;
+      @include media-phones480max{
+        display: none;
+      }
+    }
+  }
+  &__card{
+    line-height: 100%;
+    letter-spacing: -0.04em;
+    @include media-phones375max{
+      line-height: 120%;
+      letter-spacing: -0.02em;
     }
   }
 }

@@ -1,0 +1,37 @@
+
+
+
+.text_h2{
+  text-align: center;
+  font-size: clamp(40px,4.9vw,94px);
+  font-style: normal;
+  line-height: 100%;
+  letter-spacing: -3.76px;
+}
+
+.text_average{
+  font-size: clamp(17px,1.77vw,34px);
+  font-style: normal;
+}
+.text_24{
+  font-size: clamp(12px,1.77vw,24px);
+  font-style: normal;
+}
+.text_small{
+  font-size: 17px;
+  font-style: normal;
+}
+
+.text_center{
+  text-align: center;
+}
+
+.text_400{
+  font-weight: 400;
+}
+.text_500{
+  font-weight: 500;
+}
+.text_700{
+  font-weight: 700;
+}
