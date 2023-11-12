@@ -1,0 +1,39 @@
+@font-face {
+	font-family: 'Gilroy';
+	font-style: normal;
+	font-weight: 700;
+	font-display: swap;
+	src: local(''),
+	url("../font/Gilroy-Bold.eot"),
+	url("../font/Gilroy-Bold.ttf") format("truetype"),
+	url("../font/Gilroy-Bold.svg") format("svg"),
+	url("../font/Gilroy-Bold.eot") format("embedded-opentype"),
+	url("../font/Gilroy-Bold.woff2") format("woff2"),
+	url("../font/Gilroy-Bold.woff") format("woff");
+}
+@font-face {
+	font-family: 'Gilroy';
+	font-style: normal;
+	font-weight: 500;
+	font-display: swap;
+	src: local(''),
+	url("../font/Gilroy-Medium.eot"),
+	url("../font/Gilroy-Medium.ttf") format("truetype"),
+	url("../font/Gilroy-Medium.svg") format("svg"),
+	url("../font/Gilroy-Medium.eot") format("embedded-opentype"),
+	url("../font/Gilroy-Medium.woff2") format("woff2"),
+	url("../font/Gilroy-Medium.woff") format("woff");
+}
+@font-face {
+	font-family: 'Gilroy';
+	font-style: normal;
+	font-weight: 400;
+	font-display: swap;
+	src: local(''),
+	url("../font/Gilroy-Regular.eot"),
+	url("../font/Gilroy-Regular.ttf") format("truetype"),
+	url("../font/Gilroy-Regular.svg") format("svg"),
+	url("../font/Gilroy-Regular.eot") format("embedded-opentype"),
+	url("../font/Gilroy-Regular.woff2") format("woff2"),
+	url("../font/Gilroy-Regular.woff") format("woff");
+}
