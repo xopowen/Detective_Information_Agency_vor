@@ -196,6 +196,7 @@ export class OptionsAnime {
      * @description this is example.
      * @description she need for documentations
      * @return undefined
+     * @deprecated
      * @param  el
      * @param {Number} index
      * @param {Number} lenArrayElements
@@ -218,7 +219,7 @@ export class OptionsAnime {
      *
      * @param {Number|function|anime.stagger} value if function she get el,index,lenElements
      * @example
-     * duration:12,
+     * duration:12000,//ms
      * duration:function(el,index,lenElements){
      *     return index - lenElements
      * }
@@ -230,7 +231,7 @@ export class OptionsAnime {
 
     /**
      * @description Defines the delay in milliseconds of the animation.
-     * @param {Number|stagger|paseParmets} value
+     * @param {Number|stagger|paseParmets|Function} value
      */
     setDelay(value) {
         this.options['delay'] = value
@@ -354,7 +355,9 @@ export class OptionsAnime {
     /**
      *
      * @param {string} property
-     * @param {Number|string|Array<OptionsAnime>|Array} value
+     * @param {Number|string|Array<OptionsAnime>|Array|function} value function example function(el, index, lenElements) {
+     *     return (l - i) + .25;
+     *   }
      * @param value
      */
     setAnimeProperty(property, value) {

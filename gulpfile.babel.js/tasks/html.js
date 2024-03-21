@@ -11,8 +11,8 @@ const html = (assets,build)=>{
     return src(assets)
         .pipe(plumber(options.plumberHTML))
         .pipe(fileIndcude())
-        .pipe(webpHtml())//для вставки конструкции picture вместо img
         .pipe(size({title:'before minimalist.'}))
+        .pipe(webpHtml(options.webpRetinaHtml))//для вставки конструкции picture вместо img
         .pipe(htmlMin(options.htmlMin))
         .pipe(size({title:'after minimalist.'}))
         .pipe(dest(build))
