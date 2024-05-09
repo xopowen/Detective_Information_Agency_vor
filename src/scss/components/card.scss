@@ -156,6 +156,14 @@
         transform: rotate(-17deg);
         width: 36%;
         height: 116.375px;
+        @include media-phones480max{
+          transform: rotate(0);
+          & svg{
+            transform: rotate(-17deg);
+            width: 100%;
+            height: 100%;
+          }
+        }
     }}
     span{
       display: none;
