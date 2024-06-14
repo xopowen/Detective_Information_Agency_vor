@@ -329,8 +329,7 @@ export class OptionsAnime {
     /**
      *
      * @param {function} value Обратный вызов срабатывает в каждом кадре, как только начинается воспроизведение анимации.
-     * @description
-     *
+     * @description value получает объект текущей анимации
      * @example
      *   update: function(anim) {
      *     progressLogEl.value = 'progress : '+Math.round(anim.progress)+'%';
