@@ -1,5 +1,6 @@
 @import 'addidions/screen-mixins.scss';
-.slaider {
+
+.slider {
   background: #F3F6F9;
   padding: 30px;
   border-radius: 50px;
@@ -11,7 +12,7 @@
     flex-direction: column;
     gap: 10px;
   }
-  &_headen {
+  &__headen {
     display: flex;
     justify-content: space-between;
     align-items: center;
@@ -23,7 +24,7 @@
       gap: 20px;
     }
   }
-  &_heat {
+  &__heat {
     font-size: 94px;
      @include media-phones375max {
       font-size: 40px;
@@ -31,7 +32,7 @@
 
 
   }
-  &_subtext {
+  &__subtext {
     font-size: 30px;
     line-height: 120%;
     letter-spacing: -0.03em;
@@ -43,11 +44,76 @@
 
 
   }
-  &_list {}
-  &_item {}
+  &__list {}
+  &__item {  cursor: pointer;}
+
+  // .slider__navigate
+  &__navigate {
+    position: relative;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    border-radius: 100px;
+    padding: 24px;
+    width: 169px;
+    height: 84px;
+    overflow: hidden;
+    background: white;
+    transition: box-shadow ease 0.5s;
+    &:after{
+      content: '';
+      position: absolute;
+      left: 50%;
+      height: 30%;
+      width: 1px;
+      background: #e4e7f1;
+      //transform: translateY(-30%);
+    }
+    &:hover{
+      box-shadow: black 0 0 10px;
+    }
+    &:active{
+      box-shadow: black -5px 0px 10px;
+    }
+    &:has(.slider__navigate-button_prev:hover,.slider__navigate-button_prev:active)  {
+        box-shadow: black -5px 0px 10px;
+    }
+    &:has(.slider__navigate-button_next:hover,.slider__navigate-button_next:active)  {
+      box-shadow: black 5px 0  10px;
+    }
+  }
+
+  // .slider__navigate-button
+  &__navigate-button {
+    background: transparent;
+    border: none;
+    outline: none;
+    transition: .3s  ;
+    &:hover g{
+      opacity: 1;
+    }
+    &:active g{
+      opacity: 1;
+    }
+    &:focus{
+      transform: scale(1.1);
+    }
+    &:hover{
+      transform: scale(1.1);
+    }
+    &:active{
+      transform: scale(1.2);
+    }
+
+    & g{
+      opacity: 0.22;
+    }
+
+  }
 }
 
-.slaider-item {
+.slider-item {
+
   background: #FFFFFF;
   border-radius: 40px;
   max-width: 425px;
@@ -56,8 +122,9 @@
    @include media-phones375max {
     margin:0;
   }
-  &_img {}
-  &_body {
+
+  &__img {}
+  &__body {
     padding: 20px;
     gap: 30px;
     display: flex;
@@ -65,13 +132,13 @@
     max-width: 345px;
     min-width: 335px;
   }
-  &_header {
+  &__header {
     font-size: 34px;
     line-height: 90%;
     letter-spacing: -0.04em;
     color: #142251;
   }
-  &_main {
+  &__main {
     padding-left: 10px;
     font-size: 17px;
     line-height: 100%;
@@ -81,7 +148,7 @@
       font-size: 14px;
     }
   }
-  &_li {
+  &__li {
     list-style: disclosure-closed;
     margin: 10px;
   }

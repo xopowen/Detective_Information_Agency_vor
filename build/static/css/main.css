@@ -1,10 +1,3 @@
-@font-face{
-	font-family:Gilroy;
-	font-style:normal;
-	font-weight:700;
-	font-display:swap;
-	src:local(''),url(../fonts/Gilroy-Bold.eot),url(../fonts/Gilroy-Bold.ttf) format("truetype"),url(../fonts/Gilroy-Bold.svg) format("svg"),url(../fonts/Gilroy-Bold.eot) format("embedded-opentype"),url(../fonts/Gilroy-Bold.woff2) format("woff2"),url(../fonts/Gilroy-Bold.woff) format("woff")
-}
 a,
 h1,
 h2,
@@ -309,12 +302,12 @@ button:active{
 	padding:50px 38px;
 	margin:auto
 }
-.slaider{
+.slider{
 	background:#f3f6f9;
 	padding:30px;
 	border-radius:50px
 }
-.slaider_headen{
+.slider__headen{
 	display:-webkit-box;
 	display:-ms-flexbox;
 	display:flex;
@@ -326,24 +319,104 @@ button:active{
 	align-items:center;
 	padding:100px 82px
 }
-.slaider_heat{
+.slider__heat{
 	font-size:94px
 }
-.slaider_subtext{
+.slider__subtext{
 	font-size:30px;
 	line-height:120%;
 	letter-spacing:-.03em;
 	color:#989eb1;
 	max-width:323px
 }
-.slaider-item{
+.slider__item{
+	cursor:pointer
+}
+.slider__navigate{
+	position:relative;
+	display:-webkit-box;
+	display:-ms-flexbox;
+	display:flex;
+	-webkit-box-pack:justify;
+	-ms-flex-pack:justify;
+	justify-content:space-between;
+	-webkit-box-align:center;
+	-ms-flex-align:center;
+	align-items:center;
+	border-radius:100px;
+	padding:24px;
+	width:169px;
+	height:84px;
+	overflow:hidden;
+	background:#fff;
+	-webkit-transition:-webkit-box-shadow ease .5s;
+	transition:-webkit-box-shadow ease .5s;
+	transition:box-shadow ease .5s;
+	transition:box-shadow ease .5s,-webkit-box-shadow ease .5s
+}
+.slider__navigate:after{
+	content:"";
+	position:absolute;
+	left:50%;
+	height:30%;
+	width:1px;
+	background:#e4e7f1
+}
+.slider__navigate:hover{
+	-webkit-box-shadow:#000 0 0 10px;
+	box-shadow:#000 0 0 10px
+}
+.slider__navigate:active{
+	-webkit-box-shadow:#000 -5px 0 10px;
+	box-shadow:#000 -5px 0 10px
+}
+.slider__navigate:has(.slider__navigate-button_prev:hover,.slider__navigate-button_prev:active){
+	-webkit-box-shadow:#000 -5px 0 10px;
+	box-shadow:#000 -5px 0 10px
+}
+.slider__navigate:has(.slider__navigate-button_next:hover,.slider__navigate-button_next:active){
+	-webkit-box-shadow:#000 5px 0 10px;
+	box-shadow:#000 5px 0 10px
+}
+.slider__navigate-button{
+	background:0 0;
+	border:none;
+	outline:0;
+	-webkit-transition:.3s;
+	transition:.3s
+}
+.slider__navigate-button:hover g{
+	opacity:1
+}
+.slider__navigate-button:active g{
+	opacity:1
+}
+.slider__navigate-button:focus{
+	-webkit-transform:scale(1.1);
+	-ms-transform:scale(1.1);
+	transform:scale(1.1)
+}
+.slider__navigate-button:hover{
+	-webkit-transform:scale(1.1);
+	-ms-transform:scale(1.1);
+	transform:scale(1.1)
+}
+.slider__navigate-button:active{
+	-webkit-transform:scale(1.2);
+	-ms-transform:scale(1.2);
+	transform:scale(1.2)
+}
+.slider__navigate-button g{
+	opacity:.22
+}
+.slider-item{
 	background:#fff;
 	border-radius:40px;
 	max-width:425px;
 	padding:10px;
 	margin:10px
 }
-.slaider-item_body{
+.slider-item__body{
 	padding:20px;
 	gap:30px;
 	display:-webkit-box;
@@ -356,20 +429,20 @@ button:active{
 	max-width:345px;
 	min-width:335px
 }
-.slaider-item_header{
+.slider-item__header{
 	font-size:34px;
 	line-height:90%;
 	letter-spacing:-.04em;
 	color:#142251
 }
-.slaider-item_main{
+.slider-item__main{
 	padding-left:10px;
 	font-size:17px;
 	line-height:100%;
 	letter-spacing:-.04em;
 	color:#142251
 }
-.slaider-item_li{
+.slider-item__li{
 	list-style:disclosure-closed;
 	margin:10px
 }
@@ -1082,7 +1155,7 @@ p{
 	.container{
 		padding:20px 19px
 	}
-	.slaider{
+	.slider{
 		margin:-15px;
 		padding:20px;
 		display:-webkit-box;
@@ -1094,7 +1167,7 @@ p{
 		flex-direction:column;
 		gap:10px
 	}
-	.slaider_headen{
+	.slider__headen{
 		padding:0 0;
 		-webkit-box-orient:vertical;
 		-webkit-box-direction:normal;
@@ -1105,16 +1178,16 @@ p{
 		align-items:flex-start;
 		gap:20px
 	}
-	.slaider_heat{
+	.slider__heat{
 		font-size:40px
 	}
-	.slaider_subtext{
+	.slider__subtext{
 		font-size:14px
 	}
-	.slaider-item{
+	.slider-item{
 		margin:0
 	}
-	.slaider-item_main{
+	.slider-item__main{
 		font-size:14px
 	}
 	.about-us__header{
