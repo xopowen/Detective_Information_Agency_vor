@@ -7,17 +7,12 @@ let slider = new Swiper(document.body.querySelector('#slider-service'),{
     loop:true,
     slidesPerView:'auto',
     slidesPerGroup: 1,
+    spaceBetween: 40,
     navigation:{
         prevEl:document.querySelector('.slider__navigate-button_prev'),
         nextEl:document.querySelector(".slider__navigate-button_next")
-    },
-    breakpoints:{
-
-        640: {
-            slidesPerView: 4,
-            spaceBetween: 40
-        }
     }
+
 })
 document.querySelector('.slider__navigate-button_prev').addEventListener('click',()=>{
     slider.slidePrev()
