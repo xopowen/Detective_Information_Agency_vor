@@ -43,13 +43,7 @@
 
 
   &__tachBord{
-    path,
-    svg,
-    g{
-      transition: inherit;
-      width: 100%;
-      height: 100%;
-    }
+
     display:none;
     @include media-portrait767max{
 
