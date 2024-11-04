@@ -1,0 +1,35 @@
+$products_catalog_body-max-height: 149px*2 + 12px*2 + 15px;
+$desktop_screen_width: 1920 ;
+$mobile_screen_width: 375 ;
+
+//чёрный цвет
+$black_color:black;
+//серый цвет
+$gray_color:#6B6B6C;
+//булый цвет
+$white_color: #728dab;
+$color_active_link:blue;
+
+
+
+:root{
+  --desktop_screen_width: 1920 + px;
+  --mobile_screen_width: 375 + px;
+
+  --font-family: "Gilroy", sans-serif;
+  --second-family: "Roboto", sans-serif;
+  --background-color-main:white;
+  --font-color-main:black;
+  --color-active_link:blue;
+  --outline-color:#728DABFF;
+  --color-E4E7F1:#E4E7F1;
+  --color-142251:#142251;
+  --color-213887:#213887 ;
+  --color-989EB1:#989EB1;
+  --color-F2F3F8:#F2F3F8;
+}
+:root[theme='dark'] {
+  --background-color-main:#6B6B6C;
+  --font-color-main:black;
+  --color-active_link: rgba(56, 110, 232, 0.2);
+}

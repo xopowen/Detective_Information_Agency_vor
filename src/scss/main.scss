@@ -1,9 +1,12 @@
 @import "fonts.css";
+@import "components/addidions/root";
+
+@import "components/addidions/variable";
 @import "components/addidions/fout-var";
 @import "components/addidions/color-var";
 
 @import "components/addidions/style_zeroing";
-@import "components/addidions/variable";
+
 
 @import "components/addidions/mixins";
 @import "components/addidions/screen-mixins";

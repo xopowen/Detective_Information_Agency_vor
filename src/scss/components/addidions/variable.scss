@@ -1,18 +1,2 @@
-$products_catalog_body-max-height: 149px*2 + 12px*2 + 15px;
-$desktop_screen_width:1920 ;
-$mobile_screen_width:375px;
 
-:root{
-  --desktop_screen_width:$desktop_screen_width+px;
-  --mobile_screen_width:$mobile_screen_width+px;
-  --font-family: "Gilroy", sans-serif;
-  --second-family: "Roboto", sans-serif;
-}
 
-%head_card{
-  font-family: Geometria,sans-serif;
-  font-size: calc(min(5vw,28px));
-  font-style: normal;
-  font-weight: 700;
-  line-height: normal;
-}
