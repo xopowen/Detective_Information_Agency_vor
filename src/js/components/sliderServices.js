@@ -1,6 +1,10 @@
 import Swiper from 'swiper';
 import {Navigation} from "swiper/modules";
 
+
+/**
+ * @type {Swiper}
+ */
 let slider = new Swiper(document.body.querySelector('#slider-service'),{
     modules:[Navigation],
     direction:'horizontal',
@@ -14,9 +18,10 @@ let slider = new Swiper(document.body.querySelector('#slider-service'),{
     }
 
 })
-document.querySelector('.slider__navigate-button_prev').addEventListener('click',()=>{
-    slider.slidePrev()
-})
-document.querySelector(".slider__navigate-button_next").addEventListener('click',()=>{
-    slider.slideNext()
-})
+//
+// document.querySelector('.slider__navigate-button_prev').addEventListener('click',()=>{
+//     slider.slidePrev()
+// })
+// document.querySelector(".slider__navigate-button_next").addEventListener('click',()=>{
+//     slider.slideNext()
+// })

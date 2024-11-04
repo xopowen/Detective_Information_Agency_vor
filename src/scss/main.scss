@@ -66,5 +66,56 @@ p{
   font-family: Gilroy, sans-serif;
   @extend %main_font;
 }
+#voice-recorder{
+  display: flex;
+  justify-content: center;
+  padding: 5%;
+  svg{
+    height: 100%;
+    width: auto;
+    object-fit: contain;
+  }
+}
+
+#lose-human{
+  position: relative;
+
+  img{
+    position: absolute;
+    max-width: 60%;
+    transition: .3s;
+    animation-name:blink;
+    animation-direction: normal;
+    animation-iteration-count: infinite;
+    animation-play-state: running;
+    animation-fill-mode: forwards;
+    &:first-child{
+      animation-delay: 1s;
+      animation-duration: 5s;
+      transform: translateY(-10%);
+    }
+    &:nth-child(2){
+      top:0;
+      left: 0;
+      animation-duration: 5s;
+      transform: translate(38%, 30%);
+      z-index: 100;
+    }
+    &:last-child{
+      bottom: 0;
+      right: 0;
+      animation-delay: 2s;
+      animation-duration: 5s;
+      transform: translateY(10%);
+    }
+  }
+}
+@keyframes blink {
+  0%{
+  opacity: 1;
+}
+  50%{opacity: 0}
+  100%{opacity: 1}
+}
 
 

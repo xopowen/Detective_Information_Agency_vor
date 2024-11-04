@@ -8,3 +8,4 @@ initMainSvgAnimation()
 
 const soundDetector = document.getElementById(ID_SONG_DEECTOR_CARD)
 animSoundDetector(soundDetector)
+animSoundDetector(document.querySelector('#voice-recorder g'))
