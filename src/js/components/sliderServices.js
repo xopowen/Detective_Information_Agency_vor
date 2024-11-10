@@ -9,6 +9,8 @@ let slider = new Swiper(document.body.querySelector('#slider-service'),{
     modules:[Navigation],
     direction:'horizontal',
     loop:true,
+    autoHeight:false,
+    setWrapperSize:true,
     slidesPerView:'auto',
     slidesPerGroup: 1,
     spaceBetween: 40,

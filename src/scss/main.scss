@@ -83,7 +83,9 @@ p{
 #lose-human{
   position: relative;
 
-  img{
+    picture,
+      source,
+      img{
     position: absolute;
     max-width: 60%;
     transition: .3s;
@@ -112,6 +114,49 @@ p{
       transform: translateY(10%);
     }
   }
+}
+#anim-map{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+    picture,
+      source,
+      img,svg{
+      width: 70%;
+      height: 70%;
+    }
+}
+
+#folder-with-paper{
+  display: flex;
+  justify-content: center;
+  align-items: end;
+    picture,
+      source,
+      img{
+      height: 70%;
+      width: 70%;
+      transition: .3s;
+
+      &:hover{
+        transform: scale(1.1);
+      }
+      @include media-not-hover{
+
+        &:active{
+          transform: scale(1.1);
+        }
+      }
+    }
+}
+.blink{
+  transition: .3s;
+  animation-name:blink;
+  animation-direction: normal;
+  animation-iteration-count: infinite;
+  animation-play-state: running;
+  animation-fill-mode: forwards;
+  animation-duration: 3s;
 }
 @keyframes blink {
   0%{

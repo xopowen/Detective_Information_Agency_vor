@@ -313,7 +313,8 @@ button:active{
 	max-width:323px
 }
 .slider__item{
-	cursor:pointer
+	cursor:pointer;
+	height:auto
 }
 .slider__navigate{
 	position:relative;
@@ -562,7 +563,7 @@ button:active{
 	justify-content:space-between
 }
 .card:nth-child(1){
-	background:url(../img/icons/Ellipse32.svg) no-repeat 10% 90%/40% #f2f3f8;
+	background:#f2f3f8;
 	padding:20px;
 	max-width:454px;
 	height:clamp(150px,15.6vw,293px);
@@ -933,7 +934,9 @@ p{
 #lose-human{
 	position:relative
 }
-#lose-human img{
+#lose-human img,
+#lose-human picture,
+#lose-human source{
 	position:absolute;
 	max-width:60%;
 	-webkit-transition:.3s;
@@ -949,7 +952,9 @@ p{
 	-webkit-animation-fill-mode:forwards;
 	animation-fill-mode:forwards
 }
-#lose-human img:first-child{
+#lose-human img:first-child,
+#lose-human picture:first-child,
+#lose-human source:first-child{
 	-webkit-animation-delay:1s;
 	animation-delay:1s;
 	-webkit-animation-duration:5s;
@@ -958,7 +963,9 @@ p{
 	-ms-transform:translateY(-10%);
 	transform:translateY(-10%)
 }
-#lose-human img:nth-child(2){
+#lose-human img:nth-child(2),
+#lose-human picture:nth-child(2),
+#lose-human source:nth-child(2){
 	top:0;
 	left:0;
 	-webkit-animation-duration:5s;
@@ -968,7 +975,9 @@ p{
 	transform:translate(38%,30%);
 	z-index:100
 }
-#lose-human img:last-child{
+#lose-human img:last-child,
+#lose-human picture:last-child,
+#lose-human source:last-child{
 	bottom:0;
 	right:0;
 	-webkit-animation-delay:2s;
@@ -978,6 +987,66 @@ p{
 	-webkit-transform:translateY(10%);
 	-ms-transform:translateY(10%);
 	transform:translateY(10%)
+}
+#anim-map{
+	display:-webkit-box;
+	display:-ms-flexbox;
+	display:flex;
+	-webkit-box-pack:center;
+	-ms-flex-pack:center;
+	justify-content:center;
+	-webkit-box-align:center;
+	-ms-flex-align:center;
+	align-items:center
+}
+#anim-map img,
+#anim-map picture,
+#anim-map source,
+#anim-map svg{
+	width:70%;
+	height:70%
+}
+#folder-with-paper{
+	display:-webkit-box;
+	display:-ms-flexbox;
+	display:flex;
+	-webkit-box-pack:center;
+	-ms-flex-pack:center;
+	justify-content:center;
+	-webkit-box-align:end;
+	-ms-flex-align:end;
+	align-items:end
+}
+#folder-with-paper img,
+#folder-with-paper picture,
+#folder-with-paper source{
+	height:70%;
+	width:70%;
+	-webkit-transition:.3s;
+	transition:.3s
+}
+#folder-with-paper img:hover,
+#folder-with-paper picture:hover,
+#folder-with-paper source:hover{
+	-webkit-transform:scale(1.1);
+	-ms-transform:scale(1.1);
+	transform:scale(1.1)
+}
+.blink{
+	-webkit-transition:.3s;
+	transition:.3s;
+	-webkit-animation-name:blink;
+	animation-name:blink;
+	-webkit-animation-direction:normal;
+	animation-direction:normal;
+	-webkit-animation-iteration-count:infinite;
+	animation-iteration-count:infinite;
+	-webkit-animation-play-state:running;
+	animation-play-state:running;
+	-webkit-animation-fill-mode:forwards;
+	animation-fill-mode:forwards;
+	-webkit-animation-duration:3s;
+	animation-duration:3s
 }
 @-webkit-keyframes blink{
 	0%{
@@ -1004,9 +1073,6 @@ p{
 @supports (-webkit-appearance:none){
 	.about-us__list-card:before{
 		background-image:url(../img/icons/pins.svg)
-	}
-	.card:nth-child(1){
-		background-image:url(../img/icons/Ellipse32.svg)
 	}
 	.start-page{
 		background-image:url(../img/icons/net-point.svg)
@@ -1337,5 +1403,12 @@ p{
 		-webkit-transform:translateY(-40px);
 		-ms-transform:translateY(-40px);
 		transform:translateY(-40px)
+	}
+	#folder-with-paper img:active,
+	#folder-with-paper picture:active,
+	#folder-with-paper source:active{
+		-webkit-transform:scale(1.1);
+		-ms-transform:scale(1.1);
+		transform:scale(1.1)
 	}
 }
